@@ -34,7 +34,7 @@ public class GlassesController : MonoBehaviour
             animator.SetInteger("State", 3);
             PlayerManager.instance.state = 3;
         }
-        if (Keyboard.current[Key.Escape].wasPressedThisFrame)
+        if (Keyboard.current[Key.Tab].wasPressedThisFrame)
         {
             animator.SetInteger("State", 0);
             PlayerManager.instance.state = 0;
