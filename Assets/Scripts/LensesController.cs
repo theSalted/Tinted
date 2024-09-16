@@ -34,21 +34,29 @@ public class LensesController : MonoBehaviour
         {
             monocleState = 1;
             magnifierState = 1;
+            PlayerManager.instance.state = 0;
         }
         else if (hasMonocle && Input.GetMouseButton(1))
         {
             monocleState = 2;
             magnifierState = 0;
+            if (PlayerManager.instance.state != 2) {
+                PlayerManager.instance.state = 2;
+            }
         }
         else if (hasMagnifier && Input.GetMouseButton(0))
         {
             monocleState = 0;
             magnifierState = 2;
+            if (PlayerManager.instance.state != 1) {
+                PlayerManager.instance.state = 1;
+            }
         }
         else
         {
             monocleState = 0;
             magnifierState = 0;
+            PlayerManager.instance.state = 0;
         }
 
         if (hasMonocle)
