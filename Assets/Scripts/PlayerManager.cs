@@ -6,9 +6,10 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     // Glasses Object
-    [SerializeField] private GameObject glasses;
+    [SerializeField] private GameObject monocle;
+    [SerializeField] private GameObject magnifier;
     // Player obtained glasses
-    public bool hasGlasses = false;
+    public List<string> inventory = new List<string>();
     
     public int state = 0;
 
@@ -37,13 +38,5 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasGlasses)
-        {
-            glasses.SetActive(true);
-        }
-        else
-        {
-            glasses.SetActive(false);
-        }
     }
 }

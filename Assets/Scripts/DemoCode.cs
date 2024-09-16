@@ -16,7 +16,7 @@ public class DemoCode : MonoBehaviour
         // Detect input 'e'
         if (Input.GetKeyDown(KeyCode.E))
         {
-            PlayerManager.instance.hasGlasses = true;
+            // PlayerManager.instance.hasGlasses = true;
             // disable this object
             gameObject.SetActive(false);
         }
