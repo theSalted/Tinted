@@ -30,6 +30,7 @@ public class LensesController : MonoBehaviour
         // Hold left click to use magnifier (State = 2)
         // Hold both right and left click to use both (State = 1)
         // Release both right and left click to stop using both (State = 0)
+        
         if (hasMonocle && Input.GetMouseButton(1) && hasMagnifier && Input.GetMouseButton(0))
         {
             monocleState = 1;
